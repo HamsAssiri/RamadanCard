@@ -15,8 +15,10 @@
 
     .card {
       position: relative;
-      width: 900px;
-      height: 500px;
+      width: 95%; /*عرش شاشة الجوال*/
+      max-width: 900px;/*ما يتجاوزها حتى لو كبرت الشاشة*/
+      height: auto; /*يتمدد على قد الحاجة*/
+      min-height: 500px; /*اقل طول ممكن عشان يحافظ على الشكل*/
       border-radius: 28px;
       overflow: hidden;
       background: linear-gradient(135deg, rgba(255, 215, 128, 0.08), rgba(255, 255, 255, 0.02));
@@ -286,4 +288,35 @@
         transform: scale(0.8);
       }
     }
-  
+    
+    /* التناسب مع كل الشاشات*/
+    @media (max-width: 768px) {
+    .content {
+        padding: 180px 30px 40px 30px; 
+        text-align: center; /* توسيط النص للجوال */
+        align-items: center;
+    }
+
+    .crescent-wrapper {
+        left: 50%; /* الهلال في النص ويتصغر*/
+        transform: translateX(-50%) scale(0.7); 
+        top: 20px;
+    }
+
+    .title {
+        font-size: 32px;  /* تصغير الخط للشاشات الصغيرة */
+    }
+
+    .title span {
+        font-size: 20px;
+    }
+
+    .dua {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .lantern {
+        left: 130px; /* تعديل مكان الفانوس  */
+    }
+    }
